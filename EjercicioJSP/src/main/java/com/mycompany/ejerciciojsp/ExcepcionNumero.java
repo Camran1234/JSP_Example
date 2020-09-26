@@ -24,7 +24,19 @@ public class ExcepcionNumero {
         }  
     }
     
-    double getNumber(String number){
-        return (Double.parseDouble(number));
-    }  
+    /**
+     * Retorna verdadero si el numero puede convertirse en Integer
+     * @param number
+     * @return 
+     */
+    boolean proveNumberInteger(String number){
+        try {
+            int numberDouble = Integer.parseInt(number);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }  
+    }
+    
+      
 }

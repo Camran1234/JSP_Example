@@ -11,4 +11,20 @@ package com.mycompany.ejerciciojsp;
  */
 public class CalculadoraBinaria {
     
+    private ExcepcionNumero excepcion = new ExcepcionNumero();
+    
+    /**
+     * Devuelve una cadena string con el numero binario del numero indicado
+     * @param number
+     * @return 
+     */
+    public String parseToBinary(String number){
+        if(excepcion.proveNumberInteger(number)){
+            int numero = Integer.parseInt(number);
+            return (Integer.toBinaryString(numero));
+        } else{
+            return "No es un numero entero, no se pudo transformar a binario";
+        }
+    }
+    
 }
